@@ -1,0 +1,38 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/unit' as u;
+@use 'scss/color' as c;
+
+.slideWrapper {
+  max-width: u.rem-calc(686);
+  position: relative;
+
+  &::before {
+    content: '';
+    height: calc(100% + u.rem-calc(40));
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.25s;
+    width: calc(100% + u.rem-calc(40));
+    z-index: 2;
+  }
+}
+
+.slide {
+  cursor: pointer;
+}
+
+.wrapper {
+  position: relative;
+
+  &:hover .slideWrapper:not(:hover) {
+    &::before {
+      backdrop-filter: blur(u.rem-calc(10));
+    }
+  }
+
+  :global(.swiper) {
+    overflow: visible !important;
+  }
+}
