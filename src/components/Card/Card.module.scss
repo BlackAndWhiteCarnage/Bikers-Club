@@ -12,10 +12,10 @@ $padding-mobile: u.rem-calc(14);
 }
 
 .inner {
-  position: relative;
-  color: color.get(gray);
   background: color.get(white);
+  color: color.get(gray);
   padding: u.rem-calc(24) $padding-x;
+  position: relative;
 
   @include bp.down(sm) {
     padding: u.rem-calc(24) $padding-mobile;
@@ -35,15 +35,15 @@ $padding-mobile: u.rem-calc(14);
 }
 
 .label {
-  position: absolute;
-  color: color.get(gray);
   background: color.get(orange);
-  font-weight: 900;
-  text-transform: uppercase;
-  padding: u.rem-calc(8) u.rem-calc(12);
   bottom: 0;
-  transform: translateY(50%);
+  color: color.get(gray);
+  font-weight: 900;
+  padding: u.rem-calc(8) u.rem-calc(12);
+  position: absolute;
   right: $padding-x;
+  text-transform: uppercase;
+  transform: translateY(50%);
 
   @include bp.down(sm) {
     padding: u.rem-calc(4) u.rem-calc(8);
