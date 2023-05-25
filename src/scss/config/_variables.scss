@@ -3,12 +3,12 @@
  */
 @use 'scss/unit' as u;
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;900&display=swap');
 
 $fonts: (
   primary: (
-    'Cinzel',
-    cursive,
+    'Heebo',
+    sans-serif,
   ),
 );
 
