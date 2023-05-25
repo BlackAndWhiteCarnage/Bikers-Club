@@ -18,16 +18,19 @@ const Card = ({
 	loggedUserPost,
 	postId,
 	title,
+	variant = 'large',
 }) => (
 	<>
-		<div className={cx('wrapper', className)}>
+		<div className={cx('wrapper', className, `is-${variant}-variant`)}>
 			<img src={src} alt={alt} />
 			<div className={classes.inner}>
 				<h3 className={classes.title}>{title}</h3>
-				<p className={cx('description', 'is-style-text-small')}>
-					{description}
-				</p>
-				<span className={cx('label', 'is-style-label')}>Twój wpis</span>
+				<p className={classes.description}>{description}</p>
+				{loggedUserPost && (
+					<span className={cx('label', 'is-style-label')}>
+						Twój wpis
+					</span>
+				)}
 			</div>
 		</div>
 		<div className={classes.buttons}>

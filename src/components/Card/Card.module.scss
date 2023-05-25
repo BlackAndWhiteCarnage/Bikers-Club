@@ -11,6 +11,58 @@ $padding-mobile: u.rem-calc(14);
   flex-direction: column;
 }
 
+.is-large-variant {
+  .title {
+    font-size: u.rem-calc(64);
+
+    @include bp.down(sm) {
+      font-size: u.rem-calc(34);
+    }
+  }
+
+  .description {
+    font-size: u.rem-calc(32);
+
+    @include bp.down(sm) {
+      font-size: u.rem-calc(20);
+    }
+  }
+
+  .label {
+    padding: u.rem-calc(8) u.rem-calc(12);
+
+    @include bp.down(sm) {
+      padding: u.rem-calc(4) u.rem-calc(8);
+    }
+  }
+}
+
+.is-small-variant {
+  .title {
+    font-size: u.rem-calc(36);
+
+    @include bp.down(sm) {
+      font-size: u.rem-calc(24);
+    }
+  }
+
+  .description {
+    font-size: u.rem-calc(24);
+
+    @include bp.down(sm) {
+      font-size: u.rem-calc(14);
+    }
+  }
+
+  .label {
+    padding: u.rem-calc(4) u.rem-calc(8);
+
+    @include bp.down(sm) {
+      padding: u.rem-calc(2) u.rem-calc(4);
+    }
+  }
+}
+
 .inner {
   background: color.get(white);
   color: color.get(gray);
@@ -39,7 +91,6 @@ $padding-mobile: u.rem-calc(14);
   bottom: 0;
   color: color.get(gray);
   font-weight: 900;
-  padding: u.rem-calc(8) u.rem-calc(12);
   position: absolute;
   right: $padding-x;
   text-transform: uppercase;
