@@ -1,14 +1,16 @@
 /**
  * Internal dependencies
  */
+import { ContextProvider, Navigation, Scrollbar } from '@/components';
 import { Dashboard } from '@/pages';
-import { Navigation, Scrollbar } from '@/components';
 
 const Root = () => (
-	<Scrollbar>
-		<Navigation />
-		<Dashboard />
-	</Scrollbar>
+	<ContextProvider>
+		<Scrollbar>
+			<Navigation />
+			<Dashboard />
+		</Scrollbar>
+	</ContextProvider>
 );
 
 export default Root;
