@@ -20,9 +20,9 @@ const Card = ({
 	title,
 	variant = 'large',
 }) => (
-	<>
+	<div>
 		<div className={cx('wrapper', className, `is-${variant}-variant`)}>
-			<img src={src} alt={alt} />
+			<img src={src} alt={alt} className={classes.image} />
 			<div className={classes.inner}>
 				<h3 className={classes.title}>{title}</h3>
 				<p className={classes.description}>{description}</p>
@@ -37,7 +37,7 @@ const Card = ({
 			<Button href={`post/${postId}`}>Czytaj dalej</Button>
 			{loggedUserPost && <Button href={`edit/${postId}`}>Edytuj</Button>}
 		</div>
-	</>
+	</div>
 );
 
 export default Card;

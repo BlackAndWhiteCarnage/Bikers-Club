@@ -1,0 +1,35 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/config/variables' as v;
+@use 'scss/unit' as u;
+
+.wrapper {
+  margin: 0 auto;
+  padding: u.rem-calc(60) v.$padding;
+  max-width: v.$max-width;
+  display: flex;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include bp.down(sm) {
+    padding: 0 v.$padding-mobile;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: u.rem-calc(40);
+  margin-top: u.rem-calc(55);
+
+  @include bp.down(md) {
+    gap: u.rem-calc(20);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include bp.down(xs) {
+    gap: u.rem-calc(10);
+    grid-template-columns: 1fr;
+  }
+}
