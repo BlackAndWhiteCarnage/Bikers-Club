@@ -1,5 +1,31 @@
 @use 'scss/breakpoint' as bp;
 @use 'scss/config/variables' as v;
+@use 'scss/unit' as u;
+
+%full-strech {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hero {
+  @extend %full-strech;
+  z-index: -1;
+
+  &::before {
+    @extend %full-strech;
+
+    content: '';
+    background: rgba(20, 20, 20, 92%);
+    backdrop-filter: blur(u.rem-calc(8));
+  }
+
+  * {
+    object-fit: cover;
+  }
+}
 
 .wrapper {
   height: calc(100vh - v.$navigation-height);
