@@ -1,8 +1,12 @@
 /**
  * External dependencies
  */
-import classes from './Home.module.scss';
 import ReactPlayer from 'react-player/lazy';
+
+/**
+ * Internal dependencies
+ */
+import classes from './Home.module.scss';
 import video from '@/videos/hero.mp4';
 
 const Home = () => (
