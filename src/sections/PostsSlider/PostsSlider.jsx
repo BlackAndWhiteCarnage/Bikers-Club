@@ -4,10 +4,10 @@
 import { Title, Slider, Card } from '@/components';
 import classes from './PostsSlider.module.scss';
 
-const PostsSlider = () => (
+const PostsSlider = ({ title }) => (
 	<div className={classes.wrapper}>
 		<div className={classes.inner}>
-			<Title className={classes.title}>Polecane</Title>
+			<Title className={classes.title}>{title}</Title>
 			<div className={classes.slider}>
 				<Slider>
 					<Card

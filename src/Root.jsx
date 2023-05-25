@@ -5,7 +5,7 @@ const Root = () => (
 	<div>
 		<Navigation />
 		<Home />
-		<PostsSlider />
+		<PostsSlider title="Polecane" />
 		<PostsGrid title="Inne" />
 	</div>
 );
