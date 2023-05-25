@@ -4,5 +4,6 @@ export { default as Loader } from './Loader';
 export { default as Navigation } from './Navigation';
 export { default as Popover } from './Popover';
 export { default as Portal } from './Portal';
+export { default as Scrollbar } from './Scrollbar';
 export { default as Slider } from './Slider';
 export { default as Title } from './Title';

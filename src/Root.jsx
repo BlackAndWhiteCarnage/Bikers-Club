@@ -2,13 +2,13 @@
  * Internal dependencies
  */
 import { Dashboard } from '@/pages';
-import { Navigation } from '@/components';
+import { Navigation, Scrollbar } from '@/components';
 
 const Root = () => (
-	<>
+	<Scrollbar>
 		<Navigation />
 		<Dashboard />
-	</>
+	</Scrollbar>
 );
 
 export default Root;
