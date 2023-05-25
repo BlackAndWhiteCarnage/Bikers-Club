@@ -1,8 +1,13 @@
 @use 'scss/breakpoint' as bp;
 @use 'scss/config/variables' as v;
 @use 'scss/unit' as u;
+@use 'scss/color';
 
 .wrapper {
+  background: color.get(black);
+}
+
+.inner {
   margin: 0 auto;
   padding: u.rem-calc(60) v.$padding;
   max-width: v.$max-width;
