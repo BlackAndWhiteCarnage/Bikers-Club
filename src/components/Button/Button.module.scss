@@ -7,11 +7,35 @@
   background: none;
   border: u.rem-calc(4) solid color.get(white);
   color: color.get(white);
+  cursor: pointer;
   font-family: font.get(primary);
+  overflow: hidden;
   padding: u.rem-calc(6) u.rem-calc(30);
+  position: relative;
+  transition: 0.2s;
+
+  &::before {
+    background: color.get(white);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    transition: 0.1s;
+    width: 100%;
+    z-index: -1;
+  }
 
   @include bp.down(sm) {
     border-width: u.rem-calc(2);
     padding: u.rem-calc(2) u.rem-calc(13);
+  }
+
+  &:hover {
+    color: color.get(gray);
+
+    &::before {
+      top: 0;
+    }
   }
 }
