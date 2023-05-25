@@ -1,0 +1,16 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/color';
+@use 'scss/font';
+@use 'scss/unit' as u;
+
+.button {
+  background: none;
+  border: u.rem-calc(4) solid color.get(white);
+  color: color.get(white);
+  font-family: font.get(primary);
+  padding: u.rem-calc(10) u.rem-calc(34);
+
+  @include bp.down(sm) {
+    padding: u.rem-calc(4) u.rem-calc(15);
+  }
+}
