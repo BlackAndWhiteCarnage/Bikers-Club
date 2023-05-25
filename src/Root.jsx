@@ -1,13 +1,14 @@
+/**
+ * Internal dependencies
+ */
+import { Dashboard } from '@/pages';
 import { Navigation } from '@/components';
-import { Home, PostsSlider, PostsGrid } from '@/sections';
 
 const Root = () => (
-	<div>
+	<>
 		<Navigation />
-		<Home />
-		<PostsSlider title="Polecane" />
-		<PostsGrid title="Inne" />
-	</div>
+		<Dashboard />
+	</>
 );
 
 export default Root;
