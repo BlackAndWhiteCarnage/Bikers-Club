@@ -13,7 +13,7 @@
   justify-content: center;
 
   @include bp.down(sm) {
-    padding: u.rem-calc(60) v.$padding-mobile;
+    padding: u.rem-calc(30) v.$padding-mobile;
   }
 }
 
@@ -24,6 +24,7 @@
   margin-top: u.rem-calc(55);
 
   @include bp.down(md) {
+    margin-top: u.rem-calc(35);
     gap: u.rem-calc(20);
     grid-template-columns: repeat(2, 1fr);
   }

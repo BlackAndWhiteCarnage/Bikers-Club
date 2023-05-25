@@ -13,18 +13,18 @@ $padding-mobile: u.rem-calc(14);
 
 .is-large-variant {
   .title {
-    font-size: u.rem-calc(64);
+    font-size: u.rem-calc(48);
 
     @include bp.down(sm) {
-      font-size: u.rem-calc(34);
+      font-size: u.rem-calc(28);
     }
   }
 
   .description {
-    font-size: u.rem-calc(32);
+    font-size: u.rem-calc(24);
 
     @include bp.down(sm) {
-      font-size: u.rem-calc(20);
+      font-size: u.rem-calc(18);
     }
   }
 
@@ -42,15 +42,15 @@ $padding-mobile: u.rem-calc(14);
     font-size: u.rem-calc(36);
 
     @include bp.down(sm) {
-      font-size: u.rem-calc(24);
+      font-size: u.rem-calc(20);
     }
   }
 
   .description {
-    font-size: u.rem-calc(24);
+    font-size: u.rem-calc(18);
 
     @include bp.down(sm) {
-      font-size: u.rem-calc(14);
+      font-size: u.rem-calc(12);
     }
   }
 
@@ -79,7 +79,7 @@ $padding-mobile: u.rem-calc(14);
 }
 
 .title {
-  margin-bottom: u.rem-calc(25);
+  margin-bottom: u.rem-calc(15);
 
   @include bp.down(xs) {
     margin-bottom: u.rem-calc(10);

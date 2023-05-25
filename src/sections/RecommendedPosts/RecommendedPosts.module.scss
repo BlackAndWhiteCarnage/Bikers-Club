@@ -18,7 +18,8 @@
   justify-content: center;
 
   @include bp.down(sm) {
-    padding: 0 v.$padding-mobile;
+    min-height: unset;
+    padding: u.rem-calc(30) v.$padding-mobile;
   }
 }
 
@@ -28,4 +29,8 @@
 
 .slider {
   margin-top: u.rem-calc(55);
+
+  @include bp.down(sm) {
+    margin-top: u.rem-calc(35);
+  }
 }
