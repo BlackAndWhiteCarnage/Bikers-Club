@@ -2,9 +2,9 @@
  * Internal dependencies
  */
 import { Title, Slider, Card } from '@/components';
-import classes from './RecommendedPosts.module.scss';
+import classes from './PostsSlider.module.scss';
 
-const RecommendedPosts = () => (
+const PostsSlider = () => (
 	<div className={classes.wrapper}>
 		<div className={classes.inner}>
 			<Title className={classes.title}>Polecane</Title>
@@ -56,4 +56,4 @@ const RecommendedPosts = () => (
 	</div>
 );
 
-export default RecommendedPosts;
+export default PostsSlider;

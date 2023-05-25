@@ -1,11 +1,11 @@
 import { Navigation } from '@/components';
-import { Home, RecommendedPosts, PostsGrid } from '@/sections';
+import { Home, PostsSlider, PostsGrid } from '@/sections';
 
 const Root = () => (
 	<div>
 		<Navigation />
 		<Home />
-		<RecommendedPosts />
+		<PostsSlider />
 		<PostsGrid title="Inne" />
 	</div>
 );
