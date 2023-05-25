@@ -7,8 +7,29 @@ $heading-tags: (h1, h2, h3, h4, h5, h6);
 $styles: (
   h1: (
     font-size: 128,
+    lg: (
+      font-size: 98,
+    ),
+    md: (
+      font-size: 64,
+    ),
+    sm: (
+      font-size: 48,
+    ),
     xs: (
       font-size: 34,
+    ),
+  ),
+  h2: (
+    font-size: 64,
+    md: (
+      font-size: 48,
+    ),
+    sm: (
+      font-size: 34,
+    ),
+    xs: (
+      font-size: 24,
     ),
   ),
   text: (
