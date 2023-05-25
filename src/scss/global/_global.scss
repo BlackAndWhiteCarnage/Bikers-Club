@@ -5,11 +5,6 @@
 @use 'scss/color';
 @use 'scss/font';
 
-:root {
-  --theme-color-primary: #{color.get(black)};
-  --theme-color-secondary: #{color.get(white)};
-}
-
 *,
 *::before,
 *::after {
@@ -19,7 +14,8 @@
 }
 
 body {
-  background: color.get(black);
+  background: color.get(gray);
+  color: color.get(white);
   font-family: font.get(primary);
   overflow-x: hidden;
 }
