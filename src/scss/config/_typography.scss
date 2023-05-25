@@ -32,6 +32,16 @@ $styles: (
       font-size: 24,
     ),
   ),
+  h3: (
+    font-size: 64,
+    line-height: 52,
+    sm: (
+      font-size: 34,
+    ),
+    xs: (
+      font-size: 24,
+    ),
+  ),
   text: (
     font-size: 32,
     xs: (
@@ -40,6 +50,7 @@ $styles: (
   ),
   text-small: (
     font-size: 24,
+    line-height: 23,
     xs: (
       font-size: 14,
     ),

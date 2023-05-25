@@ -8,9 +8,10 @@
   border: u.rem-calc(4) solid color.get(white);
   color: color.get(white);
   font-family: font.get(primary);
-  padding: u.rem-calc(10) u.rem-calc(34);
+  padding: u.rem-calc(6) u.rem-calc(30);
 
   @include bp.down(sm) {
-    padding: u.rem-calc(4) u.rem-calc(15);
+    padding: u.rem-calc(2) u.rem-calc(13);
+    border-width: u.rem-calc(2);
   }
 }

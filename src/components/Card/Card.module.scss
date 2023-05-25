@@ -1,0 +1,63 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/color';
+@use 'scss/font';
+@use 'scss/unit' as u;
+
+$padding-x: u.rem-calc(34);
+$padding-mobile: u.rem-calc(14);
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  position: relative;
+  color: color.get(gray);
+  background: color.get(white);
+  padding: u.rem-calc(24) $padding-x;
+
+  @include bp.down(sm) {
+    padding: u.rem-calc(24) $padding-mobile;
+  }
+}
+
+.title {
+  margin-bottom: u.rem-calc(25);
+
+  @include bp.down(xs) {
+    margin-bottom: u.rem-calc(10);
+  }
+}
+
+.description {
+  font-weight: 900;
+}
+
+.label {
+  position: absolute;
+  color: color.get(gray);
+  background: color.get(orange);
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: u.rem-calc(8) u.rem-calc(12);
+  bottom: 0;
+  transform: translateY(50%);
+  right: $padding-x;
+
+  @include bp.down(sm) {
+    padding: u.rem-calc(4) u.rem-calc(8);
+    right: $padding-mobile;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: u.rem-calc(25);
+  margin-top: u.rem-calc(25);
+
+  @include bp.down(xs) {
+    gap: u.rem-calc(15);
+    margin-top: u.rem-calc(15);
+  }
+}
