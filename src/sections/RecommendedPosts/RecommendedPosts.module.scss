@@ -1,0 +1,26 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/config/variables' as v;
+@use 'scss/unit' as u;
+
+.wrapper {
+  margin: 0 auto;
+  padding: u.rem-calc(60) v.$padding;
+  max-width: v.$max-width;
+  display: flex;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include bp.down(sm) {
+    padding: 0 v.$padding-mobile;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.slider {
+  margin-top: u.rem-calc(55);
+}

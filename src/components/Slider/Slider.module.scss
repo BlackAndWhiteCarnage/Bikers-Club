@@ -6,16 +6,18 @@
   max-width: u.rem-calc(686);
   position: relative;
 
-  &::before {
-    content: '';
-    height: calc(100% + u.rem-calc(40));
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.25s;
-    width: calc(100% + u.rem-calc(40));
-    z-index: 2;
+  @include bp.up(sm) {
+    &::before {
+      content: '';
+      height: calc(100% + u.rem-calc(40));
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.25s;
+      width: calc(100% + u.rem-calc(40));
+      z-index: 2;
+    }
   }
 }
 
@@ -32,7 +34,9 @@
     }
   }
 
-  :global(.swiper) {
-    overflow: visible !important;
+  @include bp.up(sm) {
+    :global(.swiper) {
+      overflow: visible !important;
+    }
   }
 }

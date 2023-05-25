@@ -16,8 +16,7 @@ const Slider = ({ children, className, ...props }) => (
 		<Swiper
 			className={classes.swiperWrapper}
 			slidesPerView="auto"
-			centeredSlides
-			spaceBetween={48}
+			spaceBetween={20}
 			slideToClickedSlide
 			{...props}
 		>
