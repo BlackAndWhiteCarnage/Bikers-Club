@@ -1,0 +1,47 @@
+/**
+ * Typography setup
+ */
+
+$heading-tags: (h1, h2, h3, h4, h5, h6);
+
+$styles: (
+  h1: (
+    font-size: 36,
+    md: (
+      font-size: 24,
+    ),
+  ),
+  p: (
+    font-size: 18,
+    md: (
+      font-size: 14,
+    ),
+  ),
+  p-large: (
+    font-size: 18,
+  ),
+  p-small: (
+    font-size: 14,
+    md: (
+      font-size: 12,
+    ),
+  ),
+  button: (
+    font-size: 42,
+    md: (
+      font-size: 24,
+    ),
+  ),
+  list-item: (
+    font-size: 18,
+    md: (
+      font-size: 14,
+    ),
+  ),
+  label: (
+    font-size: 24,
+    md: (
+      font-size: 20,
+    ),
+  ),
+);

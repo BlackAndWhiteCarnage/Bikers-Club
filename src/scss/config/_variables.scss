@@ -1,0 +1,28 @@
+/**
+ * Variables
+ */
+@use 'scss/unit' as u;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+$fonts: (
+  primary: (
+    'Cinzel',
+    cursive,
+  ),
+);
+
+$colors: (
+  white: #eeeeee,
+  black: #090909,
+  red: #b60000,
+  green: #007800,
+);
+
+$breakpoints: (
+  xs: 480,
+  sm: 768,
+  md: 992,
+  lg: 1220,
+  xl: 1650,
+);
