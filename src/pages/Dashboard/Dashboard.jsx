@@ -21,7 +21,7 @@ const Dashboard = () => {
 			) : (
 				<Loader />
 			)}
-			<PostsGrid title="Inne" />
+			{!loading ? <PostsGrid title="Inne" items={posts} /> : <Loader />}
 		</>
 	);
 };
