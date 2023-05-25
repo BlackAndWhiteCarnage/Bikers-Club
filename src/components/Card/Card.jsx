@@ -34,7 +34,7 @@ const Card = ({
 			</div>
 		</div>
 		<div className={classes.buttons}>
-			<Button href={`post/${postId}`}>Czytaj dalej</Button>
+			<Button to={`post/${postId}`}>Czytaj dalej</Button>
 			{loggedUserPost && <Button href={`edit/${postId}`}>Edytuj</Button>}
 		</div>
 	</div>

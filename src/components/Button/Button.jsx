@@ -1,6 +1,7 @@
 /**
  * External dependencies
  */
+import { Link } from 'react-router-dom';
 import classnames from 'classnames/bind';
 
 /**
@@ -13,7 +14,11 @@ const cx = classnames.bind(classes);
 const Button = ({ children, className, ...props }) => {
 	const buttonClassName = cx(className, 'button', 'is-style-text');
 
-	return !!props.href ? (
+	return !!props.to ? (
+		<Link {...props} className={buttonClassName}>
+			{children}
+		</Link>
+	) : !!props.href ? (
 		<a {...props} className={buttonClassName}>
 			{children}
 		</a>

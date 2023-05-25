@@ -1,6 +1,7 @@
 /**
  * External dependencies
  */
+import { Link } from 'react-router-dom';
 import classnames from 'classnames/bind';
 
 /**
@@ -18,9 +19,9 @@ const cx = classnames.bind(classes);
 const Navigation = () => (
 	<div className={classes.wrapper}>
 		<nav className={classes.inner}>
-			<a className={classes.logo} href="/">
+			<Link className={classes.logo} to="/">
 				<LogoIcon />
-			</a>
+			</Link>
 			<div className={classes.links}>
 				<Popover
 					button={
@@ -37,24 +38,24 @@ const Navigation = () => (
 				>
 					<div className={classes.dropdownLinks}>
 						{rankings.map(({ url, label }, index) => (
-							<a
-								href={url}
+							<Link
+								to={url}
 								key={index}
 								className={classes.dropdownLink}
 							>
 								{label}
-							</a>
+							</Link>
 						))}
 					</div>
 				</Popover>
 				{paths.map(({ url, label }, index) => (
-					<a
+					<Link
 						key={index}
 						className={cx('link', 'is-style-text-small')}
-						href={url}
+						to={url}
 					>
 						{label}
-					</a>
+					</Link>
 				))}
 			</div>
 			<Popover
@@ -69,13 +70,13 @@ const Navigation = () => (
 			>
 				<div className={classes.dropdownLinks}>
 					{user.map(({ url, label }, index) => (
-						<a
-							href={url}
+						<Link
+							to={url}
 							key={index}
 							className={classes.dropdownLink}
 						>
 							{label}
-						</a>
+						</Link>
 					))}
 				</div>
 			</Popover>
