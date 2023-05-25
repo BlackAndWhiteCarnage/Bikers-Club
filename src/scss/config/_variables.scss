@@ -26,3 +26,9 @@ $breakpoints: (
   lg: 1220,
   xl: 1650,
 );
+
+$navigation-height: u.rem-calc(118);
+$navigation-height-mobile: u.rem-calc(90);
+$padding: u.rem-calc(40);
+$padding-mobile: u.rem-calc(20);
+$max-width: u.rem-calc(1520);

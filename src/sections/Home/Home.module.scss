@@ -1,0 +1,8 @@
+@use 'scss/config/variables' as v;
+
+.wrapper {
+  height: calc(100vh - v.$navigation-height);
+  margin: v.$navigation-height auto 0;
+  padding: 0 v.$padding;
+  max-width: v.$max-width;
+}
