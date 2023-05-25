@@ -3,11 +3,11 @@
 @use 'scss/unit' as u;
 
 %full-strech {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .hero {
@@ -16,10 +16,10 @@
 
   &::before {
     @extend %full-strech;
+    backdrop-filter: blur(u.rem-calc(8));
+    background: rgba(20, 20, 20, 92%);
 
     content: '';
-    background: rgba(20, 20, 20, 92%);
-    backdrop-filter: blur(u.rem-calc(8));
   }
 
   * {
@@ -28,12 +28,12 @@
 }
 
 .wrapper {
+  align-items: center;
+  display: flex;
   height: calc(100vh - v.$navigation-height);
   margin: v.$navigation-height auto 0;
-  padding: 0 v.$padding;
   max-width: v.$max-width;
-  display: flex;
-  align-items: center;
+  padding: 0 v.$padding;
 
   @include bp.down(sm) {
     padding: 0 v.$padding-mobile;
@@ -50,13 +50,13 @@
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: u.rem-calc(45);
   margin-top: u.rem-calc(55);
   white-space: nowrap;
-  flex-wrap: wrap;
 
   @include bp.down(md) {
-    margin-top: u.rem-calc(20);
     gap: u.rem-calc(20);
+    margin-top: u.rem-calc(20);
   }
 }

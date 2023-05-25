@@ -4,25 +4,25 @@
 @use 'scss/unit' as u;
 
 .wrapper {
-  display: flex;
-  position: fixed;
-  background: rgba(20, 20, 20, 95%);
   backdrop-filter: blur(u.rem-calc(20));
-  width: 100%;
-  top: 0;
+  background: rgba(20, 20, 20, 95%);
+  display: flex;
   height: v.$navigation-height;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 4;
 }
 
 .inner {
-  width: 100%;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: auto;
   max-width: v.$max-width;
   padding: 0 v.$padding;
-  margin: auto;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
 
   @include bp.down(lg) {
     flex-wrap: wrap;
@@ -36,21 +36,21 @@
 }
 
 .links {
-  display: flex;
   align-items: center;
   column-gap: u.rem-calc(50);
+  display: flex;
   margin: 0 auto 0 u.rem-calc(86);
   white-space: nowrap;
 
   @include bp.down(lg) {
+    border-top: u.rem-calc(2) solid color.get(white);
+    height: u.rem-calc(40);
     margin: 0;
     order: 3;
-    width: 100%;
-    border-top: u.rem-calc(2) solid color.get(white);
-    padding-top: u.rem-calc(10);
     overflow: auto;
+    padding-top: u.rem-calc(10);
     scrollbar-width: none;
-    height: u.rem-calc(40);
+    width: 100%;
 
     &::-webkit-scrollbar {
       display: none;
@@ -64,14 +64,14 @@
 }
 
 .dropdownButton {
-  color: color.get(white);
+  align-items: center;
   background: none;
   border: none;
-  display: flex;
-  align-items: center;
-  gap: u.rem-calc(6);
+  color: color.get(white);
   cursor: pointer;
+  display: flex;
   font-weight: 900;
+  gap: u.rem-calc(6);
 }
 
 .dropdownLinks {
@@ -85,8 +85,8 @@
 }
 
 .dropdownLink {
-  font-weight: 900;
   color: color.get(gray);
+  font-weight: 900;
 }
 
 .arrow {
@@ -98,9 +98,9 @@
 }
 
 .logo {
-  min-width: u.rem-calc(110);
-  height: u.rem-calc(76);
   display: block;
+  height: u.rem-calc(76);
+  min-width: u.rem-calc(110);
 
   @include bp.down(lg) {
     height: u.rem-calc(60);
@@ -108,12 +108,12 @@
 }
 
 .user {
-  cursor: pointer;
-  display: block;
-  min-width: u.rem-calc(34);
-  height: u.rem-calc(34);
   background: none;
   border: none;
+  cursor: pointer;
+  display: block;
+  height: u.rem-calc(34);
+  min-width: u.rem-calc(34);
 }
 
 .userIcon {

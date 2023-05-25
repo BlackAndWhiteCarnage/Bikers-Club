@@ -3,14 +3,13 @@
 @use 'scss/unit' as u;
 
 .wrapper {
-  margin: 0 auto;
-  padding: u.rem-calc(60) v.$padding;
-  max-width: v.$max-width;
-  display: flex;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
+  max-width: v.$max-width;
+  min-height: 100vh;
+  padding: u.rem-calc(60) v.$padding;
 
   @include bp.down(sm) {
     padding: u.rem-calc(30) v.$padding-mobile;
@@ -19,14 +18,14 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: u.rem-calc(40);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: u.rem-calc(55);
 
   @include bp.down(md) {
-    margin-top: u.rem-calc(35);
     gap: u.rem-calc(20);
     grid-template-columns: repeat(2, 1fr);
+    margin-top: u.rem-calc(35);
   }
 
   @include bp.down(xs) {

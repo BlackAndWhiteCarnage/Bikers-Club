@@ -11,58 +11,6 @@ $padding-mobile: u.rem-calc(14);
   flex-direction: column;
 }
 
-.is-large-variant {
-  .title {
-    font-size: u.rem-calc(48);
-
-    @include bp.down(sm) {
-      font-size: u.rem-calc(28);
-    }
-  }
-
-  .description {
-    font-size: u.rem-calc(24);
-
-    @include bp.down(sm) {
-      font-size: u.rem-calc(18);
-    }
-  }
-
-  .label {
-    padding: u.rem-calc(8) u.rem-calc(12);
-
-    @include bp.down(sm) {
-      padding: u.rem-calc(4) u.rem-calc(8);
-    }
-  }
-}
-
-.is-small-variant {
-  .title {
-    font-size: u.rem-calc(36);
-
-    @include bp.down(sm) {
-      font-size: u.rem-calc(20);
-    }
-  }
-
-  .description {
-    font-size: u.rem-calc(18);
-
-    @include bp.down(sm) {
-      font-size: u.rem-calc(12);
-    }
-  }
-
-  .label {
-    padding: u.rem-calc(4) u.rem-calc(8);
-
-    @include bp.down(sm) {
-      padding: u.rem-calc(2) u.rem-calc(4);
-    }
-  }
-}
-
 .inner {
   background: color.get(white);
   color: color.get(gray);
@@ -114,5 +62,57 @@ $padding-mobile: u.rem-calc(14);
   @include bp.down(xs) {
     gap: u.rem-calc(15);
     margin-top: u.rem-calc(15);
+  }
+}
+
+.is-large-variant {
+  .title {
+    font-size: u.rem-calc(48);
+
+    @include bp.down(sm) {
+      font-size: u.rem-calc(28);
+    }
+  }
+
+  .description {
+    font-size: u.rem-calc(24);
+
+    @include bp.down(sm) {
+      font-size: u.rem-calc(18);
+    }
+  }
+
+  .label {
+    padding: u.rem-calc(8) u.rem-calc(12);
+
+    @include bp.down(sm) {
+      padding: u.rem-calc(4) u.rem-calc(8);
+    }
+  }
+}
+
+.is-small-variant {
+  .title {
+    font-size: u.rem-calc(36);
+
+    @include bp.down(sm) {
+      font-size: u.rem-calc(20);
+    }
+  }
+
+  .description {
+    font-size: u.rem-calc(18);
+
+    @include bp.down(sm) {
+      font-size: u.rem-calc(12);
+    }
+  }
+
+  .label {
+    padding: u.rem-calc(4) u.rem-calc(8);
+
+    @include bp.down(sm) {
+      padding: u.rem-calc(2) u.rem-calc(4);
+    }
   }
 }

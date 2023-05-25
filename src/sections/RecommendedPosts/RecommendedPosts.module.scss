@@ -8,14 +8,13 @@
 }
 
 .inner {
-  margin: 0 auto;
-  padding: u.rem-calc(60) v.$padding;
-  max-width: v.$max-width;
-  display: flex;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
+  max-width: v.$max-width;
+  min-height: 100vh;
+  padding: u.rem-calc(60) v.$padding;
 
   @include bp.down(sm) {
     min-height: unset;
