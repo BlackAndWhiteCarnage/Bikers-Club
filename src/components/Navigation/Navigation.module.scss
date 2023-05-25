@@ -1,7 +1,6 @@
 @use 'scss/breakpoint' as bp;
 @use 'scss/color';
 @use 'scss/config/variables' as v;
-@use 'scss/font';
 @use 'scss/unit' as u;
 
 .wrapper {
@@ -11,7 +10,7 @@
   backdrop-filter: blur(u.rem-calc(20));
   width: 100%;
   top: 0;
-  height: u.rem-calc(118);
+  height: v.$navigation-height;
 }
 
 .inner {
@@ -23,14 +22,39 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include bp.down(lg) {
+    flex-wrap: wrap;
+    gap: u.rem-calc(5);
+    height: unset;
+  }
+
+  @include bp.down(sm) {
+    padding: 0 v.$padding-mobile;
+  }
 }
 
 .links {
   display: flex;
   align-items: center;
-  gap: u.rem-calc(50);
-  margin-right: auto;
-  margin-left: u.rem-calc(86);
+  column-gap: u.rem-calc(50);
+  margin: 0 auto 0 u.rem-calc(86);
+  white-space: nowrap;
+
+  @include bp.down(lg) {
+    margin: 0;
+    order: 3;
+    width: 100%;
+    border-top: u.rem-calc(2) solid color.get(white);
+    padding-top: u.rem-calc(10);
+    overflow: auto;
+    scrollbar-width: none;
+    height: u.rem-calc(40);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .link {
@@ -73,15 +97,19 @@
 }
 
 .logo {
-  width: u.rem-calc(110);
+  min-width: u.rem-calc(110);
   height: u.rem-calc(76);
   display: block;
+
+  @include bp.down(lg) {
+    height: u.rem-calc(60);
+  }
 }
 
 .user {
   cursor: pointer;
   display: block;
-  width: u.rem-calc(34);
+  min-width: u.rem-calc(34);
   height: u.rem-calc(34);
   background: none;
   border: none;
