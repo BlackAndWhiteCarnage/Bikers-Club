@@ -41,7 +41,7 @@ const Popover = ({ button, children, placement = 'bottom' }) => {
 	});
 
 	return (
-		<Portal>
+		<>
 			{cloneElement(button, {
 				onClick: () => {
 					setIsOpen(!isOpen);
@@ -49,17 +49,19 @@ const Popover = ({ button, children, placement = 'bottom' }) => {
 				},
 				ref: setButtonRef,
 			})}
-			<div
-				className={cx('popover', {
-					isOpen,
-				})}
-				ref={setPopperRef}
-				style={styles.popper}
-				{...attributes.popper}
-			>
-				{children}
-			</div>
-		</Portal>
+			<Portal>
+				<div
+					className={cx('popover', {
+						isOpen,
+					})}
+					ref={setPopperRef}
+					style={styles.popper}
+					{...attributes.popper}
+				>
+					{children}
+				</div>
+			</Portal>
+		</>
 	);
 };
 

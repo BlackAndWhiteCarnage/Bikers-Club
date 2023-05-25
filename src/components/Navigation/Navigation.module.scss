@@ -1,0 +1,93 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/color';
+@use 'scss/font';
+@use 'scss/unit' as u;
+
+.wrapper {
+  display: flex;
+  position: fixed;
+  background: rgba(20, 20, 20, 95%);
+  backdrop-filter: blur(u.rem-calc(20));
+  width: 100%;
+  height: u.rem-calc(118);
+}
+
+.inner {
+  width: 100%;
+  max-width: u.rem-calc(1520);
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: u.rem-calc(50);
+  margin-right: auto;
+  margin-left: u.rem-calc(86);
+}
+
+.link {
+  color: color.get(white);
+  font-weight: 900;
+}
+
+.dropdownButton {
+  color: color.get(white);
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: u.rem-calc(6);
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.dropdownLinks {
+  display: flex;
+  flex-direction: column;
+  padding: u.rem-calc(10) u.rem-calc(14);
+
+  :not(:last-child) {
+    margin-bottom: u.rem-calc(8);
+  }
+}
+
+.dropdownLink {
+  font-weight: 900;
+  color: color.get(gray);
+}
+
+.arrow {
+  width: u.rem-calc(10);
+
+  path {
+    fill: color.get(white);
+  }
+}
+
+.logo {
+  width: u.rem-calc(110);
+  height: u.rem-calc(76);
+  display: block;
+}
+
+.user {
+  cursor: pointer;
+  display: block;
+  width: u.rem-calc(34);
+  height: u.rem-calc(34);
+  background: none;
+  border: none;
+}
+
+.userIcon {
+  pointer-events: none;
+
+  path {
+    fill: color.get(white);
+  }
+}
