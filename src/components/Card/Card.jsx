@@ -6,6 +6,7 @@ import classnames from 'classnames/bind';
 /**
  * Internal dependencies
  */
+import placeholder from '@/images/placeholder.jpg';
 import { Button } from '@/components';
 import classes from './Card.module.scss';
 
@@ -22,7 +23,7 @@ const Card = ({
 }) => (
 	<div>
 		<div className={cx('wrapper', className, `is-${variant}-variant`)}>
-			<img src={src} alt={alt} className={classes.image} />
+			<img src={src || placeholder} alt={alt} className={classes.image} />
 			<div className={classes.inner}>
 				<h3 className={classes.title}>{title}</h3>
 				<p className={classes.description}>{description}</p>
