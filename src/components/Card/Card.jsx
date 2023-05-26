@@ -16,7 +16,7 @@ const Card = ({
 	description,
 	image: { src, alt },
 	loggedUserPost,
-	postId,
+	postSlug,
 	title,
 	variant = 'large',
 }) => (
@@ -34,8 +34,10 @@ const Card = ({
 			</div>
 		</div>
 		<div className={classes.buttons}>
-			<Button to={`post/${postId}`}>Czytaj dalej</Button>
-			{loggedUserPost && <Button href={`edit/${postId}`}>Edytuj</Button>}
+			<Button to={`/post/${postSlug}`}>Czytaj dalej</Button>
+			{loggedUserPost && (
+				<Button href={`/edit/${postSlug}`}>Edytuj</Button>
+			)}
 		</div>
 	</div>
 );

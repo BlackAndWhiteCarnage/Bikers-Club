@@ -1,23 +1,24 @@
 /**
  * External dependencies
  */
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 
 /**
  * Internal dependencies
  */
 import { ContextProvider, Navigation, Scrollbar } from '@/components';
-import { Dashboard } from '@/pages';
+import { Dashboard, Post } from '@/pages';
 
 const Root = () => (
 	<ContextProvider>
 		<Scrollbar>
-			<Router>
+			<HashRouter>
 				<Navigation />
 				<Routes>
-					<Route path="/" element={<Dashboard />} />
+					<Route index path="/" element={<Dashboard />} />
+					<Route path="/post/:slug" element={<Post />} />
 				</Routes>
-			</Router>
+			</HashRouter>
 		</Scrollbar>
 	</ContextProvider>
 );

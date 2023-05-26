@@ -12,7 +12,7 @@ const PostsSlider = ({ title, items }) => (
 				{console.log(items)}
 				<Slider>
 					{items?.data.map(
-						({ id, image, title, excerpt: description }) => (
+						({ id, image, title, excerpt: description, slug }) => (
 							<Card
 								title={title}
 								key={id}
@@ -21,6 +21,7 @@ const PostsSlider = ({ title, items }) => (
 									src: image,
 									alt: title,
 								}}
+								postSlug={slug}
 							/>
 						)
 					)}
