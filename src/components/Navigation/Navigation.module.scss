@@ -2,6 +2,7 @@
 @use 'scss/color';
 @use 'scss/config/variables' as v;
 @use 'scss/unit' as u;
+@use 'scss/placeholders/popover-button';
 
 .wrapper {
   backdrop-filter: blur(u.rem-calc(20));
@@ -74,6 +75,18 @@
   gap: u.rem-calc(6);
 }
 
+.dropdownLinks {
+  display: flex;
+  flex-direction: column;
+  padding: u.rem-calc(20);
+}
+
+.dropdownLink {
+  color: color.get(black);
+  font-weight: 900;
+  padding: u.rem-calc(5) 0;
+}
+
 .userButtons {
   display: flex;
   flex-direction: column;
@@ -85,10 +98,7 @@
 }
 
 .userButton {
-  border: u.rem-calc(2) solid color.get(gray);
-  color: color.get(gray);
-  font-size: u.rem-calc(16);
-  font-weight: 900;
+  @extend %popover-button;
 }
 
 .arrow {

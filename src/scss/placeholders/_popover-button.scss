@@ -1,0 +1,9 @@
+@use 'scss/color';
+@use 'scss/unit' as u;
+
+%popover-button {
+  border: u.rem-calc(2) solid color.get(gray);
+  color: color.get(gray);
+  font-size: u.rem-calc(16);
+  font-weight: 900;
+}
