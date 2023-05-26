@@ -1,0 +1,34 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/color';
+@use 'scss/unit' as u;
+
+.wrapper {
+  color: color.get(gray);
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  padding: u.rem-calc(20);
+}
+
+.label {
+  font-size: u.rem-calc(20);
+  margin-bottom: u.rem-calc(5);
+
+  &:not(:first-child) {
+    margin-top: u.rem-calc(15);
+  }
+}
+
+.input {
+  background: none;
+  border: u.rem-calc(2) solid color.get(gray);
+  padding: u.rem-calc(10);
+}
+
+.button {
+  border: u.rem-calc(2) solid color.get(gray);
+  color: color.get(gray);
+  font-size: u.rem-calc(16);
+  font-weight: 900;
+  margin-top: u.rem-calc(20);
+}

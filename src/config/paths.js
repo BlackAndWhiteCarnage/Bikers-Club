@@ -45,8 +45,4 @@ export const user = [
 		label: 'Twoje wpisy',
 		url: '/twoje-wpisy',
 	},
-	{
-		label: 'Wyloguj',
-		url: '/wyloguj',
-	},
 ];

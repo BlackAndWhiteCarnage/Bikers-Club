@@ -74,7 +74,7 @@
   gap: u.rem-calc(6);
 }
 
-.dropdownLinks {
+.userButtons {
   display: flex;
   flex-direction: column;
   padding: u.rem-calc(10) u.rem-calc(14);
@@ -84,8 +84,10 @@
   }
 }
 
-.dropdownLink {
+.userButton {
+  border: u.rem-calc(2) solid color.get(gray);
   color: color.get(gray);
+  font-size: u.rem-calc(16);
   font-weight: 900;
 }
 

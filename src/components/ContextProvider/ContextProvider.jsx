@@ -24,6 +24,14 @@ const ContextProvider = ({ children }) => {
 		fetchData();
 	}, []);
 
+	useEffect(() => {
+		const loggedInUser = localStorage.getItem('user');
+
+		if (loggedInUser) {
+			setUser(JSON.parse(loggedInUser));
+		}
+	}, [setUser]);
+
 	const fetchData = async () => {
 		try {
 			const response = await fetch('https://api.cyberlab24.pl/posts');
