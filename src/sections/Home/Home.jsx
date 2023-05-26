@@ -40,7 +40,7 @@ const Home = () => {
 						)}
 					</Title>
 					<div className={classes.buttons}>
-						<Button>Zaloguj się</Button>
+						{user && <Button>Twoje wpisy</Button>}
 						<Button>Zobacz najnowsze wpisy</Button>
 					</div>
 				</div>
