@@ -1,0 +1,20 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/color';
+@use 'scss/unit' as u;
+
+.wrapper {
+  color: color.get(white);
+
+  p {
+    margin: u.rem-calc(15) 0;
+  }
+
+  ul,
+  ol {
+    margin: u.rem-calc(30) 0 0 u.rem-calc(30);
+
+    @include bp.down(xs) {
+      margin: u.rem-calc(20) 0 0 u.rem-calc(20);
+    }
+  }
+}
