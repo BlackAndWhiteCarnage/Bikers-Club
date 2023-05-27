@@ -17,24 +17,38 @@ import { Dashboard, Post, YourPosts } from '@/pages';
 
 const Root = () => (
 	<ContextProvider>
-		<Scrollbar>
-			<HashRouter>
-				<Navigation />
-				<Toaster />
-				<Routes>
-					<Route path="/" element={<Dashboard />} />
-					<Route path="/post/:slug" element={<Post />} />
-					<Route
-						path="/twoje-wpisy"
-						element={
+		<HashRouter>
+			<Navigation />
+			<Toaster />
+			<Routes>
+				<Route
+					path="/"
+					element={
+						<Scrollbar>
+							<Dashboard />
+						</Scrollbar>
+					}
+				/>
+				<Route
+					path="/post/:slug"
+					element={
+						<Scrollbar>
+							<Post />
+						</Scrollbar>
+					}
+				/>
+				<Route
+					path="/twoje-wpisy"
+					element={
+						<Scrollbar>
 							<PrivateRoute>
 								<YourPosts />
 							</PrivateRoute>
-						}
-					/>
-				</Routes>
-			</HashRouter>
-		</Scrollbar>
+						</Scrollbar>
+					}
+				/>
+			</Routes>
+		</HashRouter>
 	</ContextProvider>
 );
 
