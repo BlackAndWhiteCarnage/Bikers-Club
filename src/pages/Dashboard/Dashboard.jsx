@@ -20,7 +20,7 @@ const Dashboard = () => {
 		<>
 			<Home />
 			{!loading ? (
-				<PostsSlider title="Polecane" items={posts} />
+				<PostsSlider title="Najnowsze" items={posts} />
 			) : (
 				<Loader />
 			)}
