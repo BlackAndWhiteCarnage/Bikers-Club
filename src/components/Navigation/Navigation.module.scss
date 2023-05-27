@@ -47,7 +47,7 @@
     border-top: u.rem-calc(2) solid color.get(white);
     height: u.rem-calc(40);
     margin: 0;
-    order: 3;
+    order: 2;
     overflow: auto;
     padding-top: u.rem-calc(10);
     scrollbar-width: none;
@@ -110,9 +110,8 @@
 }
 
 .logo {
-  display: block;
   height: u.rem-calc(76);
-  min-width: u.rem-calc(110);
+  max-width: u.rem-calc(110);
 
   @include bp.down(lg) {
     height: u.rem-calc(60);
@@ -123,9 +122,8 @@
   background: none;
   border: none;
   cursor: pointer;
-  display: block;
   height: u.rem-calc(34);
-  min-width: u.rem-calc(34);
+  max-width: u.rem-calc(34);
 }
 
 .userIcon {

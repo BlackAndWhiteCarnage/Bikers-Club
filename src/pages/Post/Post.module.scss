@@ -10,7 +10,6 @@
   gap: u.rem-calc(30);
   margin: calc(v.$navigation-height + u.rem-calc(55)) auto 0;
   max-width: v.$max-width;
-  min-height: calc(100vh - v.$navigation-height);
   padding: 0 v.$padding;
 
   @include bp.down(md) {
