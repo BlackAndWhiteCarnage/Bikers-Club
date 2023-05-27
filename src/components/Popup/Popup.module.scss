@@ -1,0 +1,42 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/color';
+@use 'scss/config/variables' as v;
+@use 'scss/unit' as u;
+
+.popup {
+  backdrop-filter: blur(u.rem-calc(10));
+  background: rgba(20, 20, 20, 0.9);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  overflow-x: hidden;
+  padding: v.$padding;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  @include bp.down(sm) {
+    padding: v.$padding-mobile v.$padding-mobile u.rem-calc(40);
+  }
+}
+
+.content {
+  margin: auto;
+  max-width: u.rem-calc(1200);
+  opacity: 0;
+  padding: u.rem-calc(20);
+  position: relative;
+  transition: 0.3s;
+  z-index: 5;
+}
+
+.is-open {
+  opacity: 1;
+  pointer-events: all;
+
+  .content {
+    opacity: 1;
+  }
+}

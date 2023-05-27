@@ -36,7 +36,7 @@ const Post = () => {
 				<div className={classes.separator} />
 				<Title level={2}>Inne:</Title>
 			</div>
-			<PostsGrid items={posts} />
+			<PostsGrid items={posts.data} />
 		</>
 	);
 };

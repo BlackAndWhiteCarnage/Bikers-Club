@@ -36,9 +36,6 @@ const Card = ({
 		</div>
 		<div className={classes.buttons}>
 			<Button to={`/post/${postSlug}`}>Czytaj dalej</Button>
-			{loggedUserPost && (
-				<Button href={`/edit/${postSlug}`}>Edytuj</Button>
-			)}
 		</div>
 	</div>
 );

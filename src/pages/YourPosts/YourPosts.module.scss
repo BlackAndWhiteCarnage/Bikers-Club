@@ -1,0 +1,110 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/color';
+@use 'scss/config/variables' as v;
+@use 'scss/unit' as u;
+
+$gap-between-posts: u.rem-calc(20);
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem-calc(30);
+  margin: calc(v.$navigation-height + u.rem-calc(55)) auto 0;
+  max-width: v.$max-width;
+  min-height: calc(100vh - v.$navigation-height);
+  padding: 0 v.$padding u.rem-calc(60) v.$padding;
+
+  @include bp.down(md) {
+    gap: u.rem-calc(20);
+  }
+
+  @include bp.down(sm) {
+    padding: 0 v.$padding-mobile;
+  }
+}
+
+.separator {
+  background: color.get(white);
+  margin: u.rem-calc(35) 0;
+  min-height: u.rem-calc(2);
+  width: 100%;
+
+  @include bp.down(md) {
+    margin: u.rem-calc(15) 0;
+  }
+
+  @include bp.down(xs) {
+    margin: u.rem-calc(5) 0;
+  }
+}
+
+.button {
+  width: fit-content;
+}
+
+.editor {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 8;
+}
+
+.editorInner {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem-calc(20);
+  max-width: v.$max-width;
+  padding: 0 v.$padding;
+  width: 100%;
+}
+
+.textarea {
+  background: color.get(gray);
+  border: u.rem-calc(2) solid color.get(white);
+  color: color.get(white);
+  font-size: u.rem-calc(24);
+  min-height: u.rem-calc(400);
+  padding: u.rem-calc(10);
+  resize: none;
+}
+
+.input {
+  background: color.get(gray);
+  border: u.rem-calc(2) solid color.get(white);
+  color: color.get(white);
+  font-size: u.rem-calc(24);
+  height: u.rem-calc(60);
+  padding: u.rem-calc(10);
+}
+
+.buttons {
+  display: flex;
+  gap: u.rem-calc(20);
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-between-posts;
+  list-style: none;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem-calc(20);
+  max-width: calc(50% - $gap-between-posts);
+}
+
+.image {
+  width: 100%;
+}
+
+.postContent {
+  height: u.rem-calc(300);
+}
