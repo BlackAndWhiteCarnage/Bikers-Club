@@ -28,7 +28,6 @@ const Popup = ({ children, close, isOpen = true }) => {
 					'is-open': isOpen,
 				})}
 				onClick={({ target }) => {
-					console.log(target.classList.contains(classes.popup));
 					target.classList.contains(classes.popup) && close();
 				}}
 			>
