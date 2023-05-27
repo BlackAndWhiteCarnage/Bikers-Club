@@ -63,7 +63,6 @@ const PostsGrid = ({ title }) => {
 				)}
 			</div>
 			<div className={classes.pagination}>
-				{console.log(totalPages)}
 				<Button
 					onClick={() => setPage(page - 1)}
 					className={cx({
