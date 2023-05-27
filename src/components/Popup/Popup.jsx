@@ -12,14 +12,7 @@ import classes from './Popup.module.scss';
 
 const cx = classnames.bind(classes);
 
-const Popup = ({
-	children,
-	landscapeBackround: Landscape,
-	portraitBackround: Portrait,
-	close,
-	isOpen = true,
-	title,
-}) => {
+const Popup = ({ children, close, isOpen = true }) => {
 	useEffect(() => {
 		document.documentElement.style.overflowY = isOpen ? 'hidden' : 'auto';
 
