@@ -20,9 +20,7 @@ const Post = () => {
 
 	useScrollTop();
 
-	const currentPost = posts?.data.find(
-		({ slug: postSlug }) => slug === postSlug
-	);
+	const currentPost = posts?.find(({ slug: postSlug }) => slug === postSlug);
 
 	if (loading) {
 		return <Loader />;
@@ -43,7 +41,7 @@ const Post = () => {
 				<div className={classes.separator} />
 				<Title level={2}>Inne:</Title>
 			</div>
-			<PostsGrid items={posts.data} />
+			<PostsGrid items={posts} />
 		</>
 	);
 };

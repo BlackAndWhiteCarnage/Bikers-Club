@@ -38,7 +38,7 @@ const YourPosts = () => {
 		return <Loader />;
 	}
 
-	const userPosts = posts.data.filter(
+	const userPosts = posts.filter(
 		({ user: postUser }) => postUser.id === user.user.id
 	);
 

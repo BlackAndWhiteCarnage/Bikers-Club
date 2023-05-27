@@ -20,15 +20,11 @@ const Dashboard = () => {
 		<>
 			<Home />
 			{!loading ? (
-				<PostsSlider title="Najnowsze" items={posts} />
+				<PostsSlider title="Najnowsze" items={posts.slice(0, 5)} />
 			) : (
 				<Loader />
 			)}
-			{!loading ? (
-				<PostsGrid title="Inne" items={posts.data} />
-			) : (
-				<Loader />
-			)}
+			{!loading ? <PostsGrid title="Inne" /> : <Loader />}
 		</>
 	);
 };

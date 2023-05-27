@@ -33,3 +33,14 @@
     grid-template-columns: 1fr;
   }
 }
+
+.pagination {
+  display: flex;
+  gap: u.rem-calc(20);
+  margin-top: u.rem-calc(20);
+}
+
+.is-disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}

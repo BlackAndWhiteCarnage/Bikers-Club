@@ -19,32 +19,30 @@ const PostsSlider = ({ title, items }) => {
 				<Title className={classes.title}>{title}</Title>
 				<div className={classes.slider}>
 					<Slider>
-						{items?.data
-							.slice(0, 5)
-							.map(
-								({
-									id,
-									image,
-									title,
-									excerpt: description,
-									slug,
-									user: postUser,
-								}) => (
-									<Card
-										title={title}
-										key={id}
-										description={description}
-										image={{
-											src: image,
-											alt: title,
-										}}
-										postSlug={slug}
-										loggedUserPost={
-											postUser.id === user?.user.id
-										}
-									/>
-								)
-							)}
+						{items.map(
+							({
+								id,
+								image,
+								title,
+								excerpt: description,
+								slug,
+								user: postUser,
+							}) => (
+								<Card
+									title={title}
+									key={id}
+									description={description}
+									image={{
+										src: image,
+										alt: title,
+									}}
+									postSlug={slug}
+									loggedUserPost={
+										postUser.id === user?.user.id
+									}
+								/>
+							)
+						)}
 					</Slider>
 				</div>
 			</div>
