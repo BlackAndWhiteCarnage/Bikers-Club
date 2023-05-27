@@ -7,7 +7,7 @@ import classnames from 'classnames/bind';
  * Internal dependencies
  */
 import placeholder from '@/images/placeholder.jpg';
-import { Button } from '@/components';
+import { Button, Badge } from '@/components';
 import classes from './Card.module.scss';
 
 const cx = classnames.bind(classes);
@@ -27,11 +27,7 @@ const Card = ({
 			<div className={classes.inner}>
 				<h3 className={classes.title}>{title}</h3>
 				<p className={classes.description}>{description}</p>
-				{loggedUserPost && (
-					<span className={cx('label', 'is-style-label')}>
-						Twój wpis
-					</span>
-				)}
+				{loggedUserPost && <Badge />}
 			</div>
 		</div>
 		<div className={classes.buttons}>

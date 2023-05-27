@@ -8,12 +8,12 @@ import { useParams } from 'react-router-dom';
  * Internal dependencies
  */
 import { Context } from '@/components/ContextProvider/ContextProvider';
-import { Loader, Title, Content } from '@/components';
+import { Loader, Title, Content, Badge } from '@/components';
 import { PostsGrid } from '@/sections';
 import classes from './Post.module.scss';
 
 const Post = () => {
-	const { posts, loading } = useContext(Context);
+	const { user, posts, loading } = useContext(Context);
 	const { slug } = useParams();
 
 	const currentPost = posts?.data.find(
@@ -24,12 +24,15 @@ const Post = () => {
 		return <Loader />;
 	}
 
-	const { title, image, blogPost } = currentPost;
+	const { title, image, blogPost, user: postUser } = currentPost;
 
 	return (
 		<>
 			<div className={classes.wrapper}>
-				<img src={image} alt={title} className={classes.image} />
+				<div className={classes.imageWrap}>
+					{postUser.id === user?.user.id && <Badge />}
+					<img src={image} alt={title} className={classes.image} />
+				</div>
 				<Title>{title}</Title>
 				<div className={classes.separator} />
 				<Content content={blogPost} />

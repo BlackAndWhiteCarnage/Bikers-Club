@@ -44,22 +44,6 @@ $padding-mobile: u.rem-calc(14);
   font-weight: 900;
 }
 
-.label {
-  background: color.get(orange);
-  bottom: 0;
-  color: color.get(gray);
-  font-weight: 900;
-  position: absolute;
-  right: $padding-x;
-  text-transform: uppercase;
-  transform: translateY(50%);
-
-  @include bp.down(sm) {
-    padding: u.rem-calc(4) u.rem-calc(8);
-    right: $padding-mobile;
-  }
-}
-
 .buttons {
   display: flex;
   gap: u.rem-calc(25);

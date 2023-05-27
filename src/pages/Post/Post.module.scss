@@ -4,6 +4,7 @@
 @use 'scss/unit' as u;
 
 .wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: u.rem-calc(30);
@@ -19,6 +20,10 @@
   @include bp.down(sm) {
     padding: 0 v.$padding-mobile;
   }
+}
+
+.imageWrap {
+  position: relative;
 }
 
 .image {
