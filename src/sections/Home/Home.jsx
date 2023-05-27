@@ -41,7 +41,7 @@ const Home = () => {
 					</Title>
 					<div className={classes.buttons}>
 						{user && <Button to="twoje-wpisy">Twoje wpisy</Button>}
-						<Button>Zobacz wszystkie wpisy</Button>
+						<Button to="/posty">Zobacz wszystkie wpisy</Button>
 					</div>
 				</div>
 			</div>
