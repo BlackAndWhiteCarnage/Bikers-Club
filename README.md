@@ -4,7 +4,7 @@ Live: https://bikers-club.netlify.app/
 
 <br />
 
-## Figma +More precise project description 
+## Figma + More precise project description 
 https://www.figma.com/file/L0ghQHE8GpGWP3GSgDkalW/Bikers-Club---Zadanie-rekrutacyjne?type=design&node-id=0%3A1&t=c4pJgbChO4MhJfS6-1
 
 <br />
