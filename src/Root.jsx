@@ -7,7 +7,12 @@ import { Toaster } from 'react-hot-toast';
 /**
  * Internal dependencies
  */
-import { ContextProvider, Navigation, Scrollbar } from '@/components';
+import {
+	ContextProvider,
+	Navigation,
+	Scrollbar,
+	PrivateRoute,
+} from '@/components';
 import { Dashboard, Post, YourPosts } from '@/pages';
 
 const Root = () => (
@@ -17,9 +22,16 @@ const Root = () => (
 				<Navigation />
 				<Toaster />
 				<Routes>
-					<Route index path="/" element={<Dashboard />} />
+					<Route path="/" element={<Dashboard />} />
 					<Route path="/post/:slug" element={<Post />} />
-					<Route path="/twoje-wpisy" element={<YourPosts />} />
+					<Route
+						path="/twoje-wpisy"
+						element={
+							<PrivateRoute>
+								<YourPosts />
+							</PrivateRoute>
+						}
+					/>
 				</Routes>
 			</HashRouter>
 		</Scrollbar>
