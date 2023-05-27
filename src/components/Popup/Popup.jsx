@@ -12,11 +12,20 @@ import classes from './Popup.module.scss';
 
 const cx = classnames.bind(classes);
 
-const Popup = ({ children, close, isOpen = true }) => {
+const Popup = ({
+	children,
+	landscapeBackround: Landscape,
+	portraitBackround: Portrait,
+	close,
+	isOpen = true,
+	title,
+}) => {
 	useEffect(() => {
 		document.documentElement.style.overflowY = isOpen ? 'hidden' : 'auto';
 
-		return () => (document.documentElement.style.overflowY = 'auto');
+		return () => {
+			document.documentElement.style.overflowY = 'auto';
+		};
 	}, [isOpen]);
 
 	return (
@@ -26,6 +35,7 @@ const Popup = ({ children, close, isOpen = true }) => {
 					'is-open': isOpen,
 				})}
 				onClick={({ target }) => {
+					console.log(target.classList.contains(classes.popup));
 					target.classList.contains(classes.popup) && close();
 				}}
 			>
