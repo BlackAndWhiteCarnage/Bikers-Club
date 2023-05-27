@@ -10,9 +10,9 @@ import { Navigate } from 'react-router-dom';
 import { Context } from '@/components/ContextProvider/ContextProvider';
 
 const PrivateRoute = ({ children }) => {
-	const { user } = useContext(Context);
+	const { user, loading } = useContext(Context);
 
-	if (!user) {
+	if (!user && !loading) {
 		return <Navigate to="/" replace />;
 	}
 
