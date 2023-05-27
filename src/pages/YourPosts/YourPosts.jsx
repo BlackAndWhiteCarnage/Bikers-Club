@@ -7,13 +7,15 @@ import Scrollbars from 'react-custom-scrollbars-2';
 /**
  * Internal dependencies
  */
-import { useHandlePost, usePopup } from '@/hooks';
+import { useHandlePost, usePopup, useScrollTop } from '@/hooks';
 import { Context } from '@/components/ContextProvider/ContextProvider';
 import { Loader, Title, Button, Popup } from '@/components';
 import classes from './YourPosts.module.scss';
 
 const YourPosts = () => {
 	const popup = usePopup();
+
+	useScrollTop();
 
 	const { user, loading, posts } = useContext(Context);
 

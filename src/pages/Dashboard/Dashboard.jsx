@@ -9,9 +9,12 @@ import { useContext } from 'react';
 import { Context } from '@/components/ContextProvider/ContextProvider';
 import { Home, PostsSlider, PostsGrid } from '@/sections';
 import { Loader } from '@/components';
+import { useScrollTop } from '@/hooks';
 
 const Dashboard = () => {
 	const { posts, loading } = useContext(Context);
+
+	useScrollTop();
 
 	return (
 		<>

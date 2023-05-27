@@ -10,11 +10,15 @@ import { useParams } from 'react-router-dom';
 import { Context } from '@/components/ContextProvider/ContextProvider';
 import { Loader, Title, Content, Badge } from '@/components';
 import { PostsGrid } from '@/sections';
+import { useScrollTop } from '@/hooks';
 import classes from './Post.module.scss';
 
 const Post = () => {
 	const { user, posts, loading } = useContext(Context);
+
 	const { slug } = useParams();
+
+	useScrollTop();
 
 	const currentPost = posts?.data.find(
 		({ slug: postSlug }) => slug === postSlug
