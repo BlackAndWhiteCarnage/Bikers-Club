@@ -22,7 +22,7 @@ module.exports = {
 				use: 'babel-loader',
 			},
 			{
-				test: /\.(pdf|png|jpe?g|gif)$/i,
+				test: /\.(pdf|png|jpe?g|gif|mp4)$/i,
 				use: [
 					{
 						loader: 'file-loader',
