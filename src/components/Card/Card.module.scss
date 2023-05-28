@@ -32,6 +32,10 @@ $padding-mobile: u.rem-calc(14);
   object-fit: cover;
   transition: 0.25s;
   width: 100%;
+
+  @include bp.down(sm) {
+    max-height: u.rem-calc(300);
+  }
 }
 
 .title {
