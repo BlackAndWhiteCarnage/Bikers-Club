@@ -28,10 +28,10 @@ $padding-mobile: u.rem-calc(14);
 
 .image {
   filter: grayscale(100%) brightness(50%) contrast(70%);
-  transition: 0.25s;
-  width: 100%;
   height: u.rem-calc(500);
   object-fit: cover;
+  transition: 0.25s;
+  width: 100%;
 }
 
 .title {

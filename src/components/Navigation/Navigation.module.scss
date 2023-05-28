@@ -2,6 +2,7 @@
 @use 'scss/color';
 @use 'scss/config/variables' as v;
 @use 'scss/unit' as u;
+@use 'scss/font';
 @use 'scss/placeholders/popover-button';
 
 .wrapper {
@@ -70,6 +71,7 @@
   border: none;
   color: color.get(white);
   cursor: pointer;
+  font-family: font.get(primary);
   display: flex;
   font-weight: 900;
   gap: u.rem-calc(6);

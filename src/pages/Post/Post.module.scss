@@ -5,13 +5,13 @@
 @use 'scss/placeholders/separator';
 
 .wrapper {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: u.rem-calc(30);
   margin: calc(v.$navigation-height + u.rem-calc(55)) auto 0;
   max-width: v.$max-width;
   padding: 0 v.$padding;
+  position: relative;
 
   @include bp.down(md) {
     gap: u.rem-calc(20);
