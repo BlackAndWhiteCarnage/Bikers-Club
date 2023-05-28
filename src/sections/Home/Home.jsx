@@ -25,6 +25,7 @@ const Home = () => {
 					loop
 					width="100%"
 					height="100%"
+					playsinline
 				/>
 			</div>
 			<div className={classes.wrapper}>
