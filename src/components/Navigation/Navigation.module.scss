@@ -71,8 +71,8 @@
   border: none;
   color: color.get(white);
   cursor: pointer;
-  font-family: font.get(primary);
   display: flex;
+  font-family: font.get(primary);
   font-weight: 900;
   gap: u.rem-calc(6);
 }

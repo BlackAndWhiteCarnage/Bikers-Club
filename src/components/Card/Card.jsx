@@ -26,7 +26,7 @@ const Card = ({
 			<img src={src || placeholder} alt={alt} className={classes.image} />
 			<div className={classes.inner}>
 				<h3 className={classes.title}>{title}</h3>
-				<p className={classes.description}>{description}</p>
+				<p>{description}</p>
 				{loggedUserPost && <Badge />}
 			</div>
 		</div>
