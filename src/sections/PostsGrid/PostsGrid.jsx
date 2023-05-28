@@ -63,19 +63,12 @@ const PostsGrid = ({ title }) => {
 				)}
 			</div>
 			<div className={classes.pagination}>
-				<Button
-					onClick={() => setPage(page - 1)}
-					className={cx({
-						'is-disabled': page === 1,
-					})}
-				>
+				<Button onClick={() => setPage(page - 1)} disabled={page === 1}>
 					Poprzednie
 				</Button>
 				<Button
 					onClick={() => setPage(page + 1)}
-					className={cx({
-						'is-disabled': page === totalPages,
-					})}
+					disabled={page === totalPages}
 				>
 					Następne
 				</Button>
