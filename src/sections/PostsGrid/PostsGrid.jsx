@@ -62,6 +62,7 @@ const PostsGrid = ({ title }) => {
 					)
 				)}
 			</div>
+			<div className={classes.separator}/>
 			<div className={classes.pagination}>
 				<Button onClick={() => setPage(page - 1)} disabled={page === 1}>
 					Poprzednie

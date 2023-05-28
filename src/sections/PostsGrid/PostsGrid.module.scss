@@ -1,6 +1,7 @@
 @use 'scss/breakpoint' as bp;
 @use 'scss/config/variables' as v;
 @use 'scss/unit' as u;
+@use 'scss/placeholders/separator';
 
 .wrapper {
   display: flex;
@@ -36,6 +37,10 @@
 
 .pagination {
   display: flex;
+  justify-content: space-between;
   gap: u.rem-calc(20);
-  margin-top: u.rem-calc(20);
+}
+
+.separator {
+  @extend %separator;
 }

@@ -2,6 +2,7 @@
 @use 'scss/color';
 @use 'scss/config/variables' as v;
 @use 'scss/unit' as u;
+@use 'scss/placeholders/separator';
 
 .wrapper {
   position: relative;
@@ -30,16 +31,5 @@
 }
 
 .separator {
-  background: color.get(white);
-  margin: u.rem-calc(35) 0;
-  min-height: u.rem-calc(2);
-  width: 100%;
-
-  @include bp.down(md) {
-    margin: u.rem-calc(15) 0;
-  }
-
-  @include bp.down(xs) {
-    margin: u.rem-calc(5) 0;
-  }
+  @extend %separator;
 }

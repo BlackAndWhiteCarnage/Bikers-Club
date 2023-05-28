@@ -1,0 +1,18 @@
+@use 'scss/breakpoint' as bp;
+@use 'scss/color';
+@use 'scss/unit' as u;
+
+%separator {
+    background: color.get(white);
+    margin: u.rem-calc(25) 0;
+    min-height: u.rem-calc(2);
+    width: 100%;
+
+    @include bp.down(md) {
+      margin: u.rem-calc(15) 0;
+    }
+
+    @include bp.down(xs) {
+      margin: u.rem-calc(5) 0;
+    }
+}
