@@ -49,20 +49,21 @@ Also I was using `npm 19.5.0`
 
 ## Quick Preview!
 
+
 ### Dashboard
-<img src="https://github.com/BlackAndWhiteCarnage/Bikers-Club/assets/71930296/e14421cb-524f-4a72-8c13-9bb6cd4c891d" alt="Dashboard" width='100%'/>
+<img src="https://github.com/BlackAndWhiteCarnage/Bikers-Club/assets/71930296/c4de45f1-7e66-4aa5-8aa4-505490c993da" alt="Dashboard" width='100%'/>
 
 ### Most Recent Slider
-<img src="https://github.com/BlackAndWhiteCarnage/Bikers-Club/assets/71930296/f731810d-35a0-4086-8f88-294be5dbf2aa" alt="Most Recent Slider" width='100%'/>
+<img src="https://github.com/BlackAndWhiteCarnage/Bikers-Club/assets/71930296/966707d1-1a61-4ab0-9ccb-d7d741e49e2c" alt="Most Recent Slider" width='100%'/>
 
 ### Posts Grid
-<img src="https://github.com/BlackAndWhiteCarnage/Bikers-Club/assets/71930296/b4f762c5-3e85-4b59-a4a5-20e8a04ca88b" alt="Posts Grid" width='100%'/>
+<img src="https://github.com/BlackAndWhiteCarnage/Bikers-Club/assets/71930296/ca9e8562-176c-4f9f-adf5-629e501067ae" alt="Posts Grid" width='100%'/>
 
 ### User Posts
-<img src="https://github.com/BlackAndWhiteCarnage/Bikers-Club/assets/71930296/7a5b3c27-23bb-4267-beda-fbce3f8ad82c" alt="User Posts" width='100%'/>
+<img src="https://github.com/BlackAndWhiteCarnage/Bikers-Club/assets/71930296/105941e8-ed1a-4a3d-b90a-8aa7cdf65cba" alt="User Posts" width='100%'/>
 
 ### Edit / Create Post
-<img src="https://github.com/BlackAndWhiteCarnage/Bikers-Club/assets/71930296/e27b0142-a145-40e9-93e9-89e4ff7bb8a5" alt="Edit / Create Post" width='100%'/>
+<img src="https://github.com/BlackAndWhiteCarnage/Bikers-Club/assets/71930296/a6311566-e6a7-4b1e-94e9-8675ba73519c" alt="Edit / Create Post" width='100%'/>
 
 <br />
 
