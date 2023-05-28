@@ -36,11 +36,11 @@ const PostsGrid = ({ title }) => {
 	return (
 		<div className={classes.wrapper}>
 			<Title className={classes.title}>{title}</Title>
-			<div className={classes.grid}>
-				{loading ? (
-					<Loader />
-				) : (
-					data.map(
+			{loading ? (
+				<Loader />
+			) : (
+				<div className={classes.grid}>
+					{data.map(
 						({
 							id,
 							image,
@@ -59,9 +59,10 @@ const PostsGrid = ({ title }) => {
 								loggedUserPost={postUser?.id === user?.user?.id}
 							/>
 						)
-					)
-				)}
-			</div>
+					)}
+				</div>
+			)}
+
 			<div className={classes.separator} />
 			<div className={classes.pagination}>
 				<Button onClick={() => setPage(page - 1)} disabled={page === 1}>
