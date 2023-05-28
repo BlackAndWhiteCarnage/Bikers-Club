@@ -3,10 +3,6 @@
  */
 import { createContext, useState, useEffect } from 'react';
 
-/**
- * Internal dependencies
- */
-
 export const Context = createContext();
 
 const ContextProvider = ({ children }) => {
