@@ -7,10 +7,6 @@ Live: https://bikers-club.netlify.app/
 Login passes (email: `admin@wp.pl`, password: `qwerty`)
 
 <br />
-
-## Figma + More precise project description 
-https://www.figma.com/file/L0ghQHE8GpGWP3GSgDkalW/Bikers-Club---Zadanie-rekrutacyjne?type=design&node-id=0%3A1&t=c4pJgbChO4MhJfS6-1
-
 <br />
 
 ## Used Technologies
